@@ -1,7 +1,7 @@
 body, html{
     background-color: #DCDCDC;
 }
-div#calculator{
+div#calculadora{
     margin:auto;
     width: 550px;
     height: 700px;
@@ -11,7 +11,7 @@ div#calculator{
     font-family: 'Orbitron', sans-serif;
     box-shadow: 10px 10px 15px 3px;
 }
-#screen{
+#imprime{
     font-family: inherit;
     font-size: 60px;
     width: 510px;
@@ -41,13 +41,13 @@ button{
     box-shadow: 5px 3px 5px black;
 }
 button:hover{
-    box-shadow: inset 5px 3px 15px black;
-    background-color: rgb(94, 94, 94);
+
+    background-color: rgb(24, 1, 1);
 }
-#cleaner{
+#clear{
     font-size: 30px;
 }
-#equal{
+#equals{
     height: 206px;
     font-size: 60px;
     background-color: rgb(48, 250, 48);

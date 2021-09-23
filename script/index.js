@@ -1,32 +1,39 @@
-var screen = document.querySelector('#screen');
-document.querySelector('#cleaner')
+let imprime = document.querySelector('#imprime');
+document.querySelector('#clear')
     .addEventListener('click', function(){
-        screen.value = '';
+        imprime.value = 0;
 })
-document.querySelector('#delete')
+document.querySelector('#borrar')
     .addEventListener('click', function(){
-        screen.value = screen.value.substring(0, (screen.value.length -1));
+        imprime.value = imprime.value.substring(0, (imprime.value.length -1));
+       
 })
-function addToScreen(value){
+function addNumeros(value){
     const operationSigns = ['*','+','-','/','.'];
-    screen.value += value;
+    imprime.value += value;
+
     if (operationSigns.includes(value)){
-        var valorAnterior = screen.value.length - 2;
-        if (operationSigns.includes(screen.value[valorAnterior])){
-            screen.value = screen.value.substring(0, (screen.value.length - 2));
-            screen.value = screen.value + value;
+        let valorAnterior = imprime.value.length - 2;
+        console.log(imprime.value.length)
+        console.log(imprime.value)
+            console.log(valorAnterior)
+            console.log(imprime.value[valorAnterior])
+        if (operationSigns.includes(imprime.value[valorAnterior])){
+            imprime.value = imprime.value.substring(0, (imprime.value.length - 2));
+            imprime.value = imprime.value + value;
         }
-    }
-    switch (screen.value[0]){
+    }console.log(imprime.value[0])
+    switch (imprime.value[0]){
+        
         case '*':
-            screen.value = '';
+            imprime.value = '';
         case '/':
-            screen.value = '';
+            imprime.value = '';
         case '.':
-            screen.value = '';
+            imprime.value = '';
     }
 }
 function result(){
-    screen.value = eval(screen.value);
+    imprime.value = eval(imprime.value);
 }
 
